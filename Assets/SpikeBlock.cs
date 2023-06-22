@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HiddenBlock : MonoBehaviour
+public class SpikeBlock : MonoBehaviour
 {
     public GameObject MyBlock;
-    public bool IsHidden = false;
+    public GameObject MySpike;
+    
 
 
+    // Start is called before the first frame update
     void Start()
     {
         
@@ -23,8 +25,7 @@ public class HiddenBlock : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            IsHidden = !IsHidden;
-            MyBlock.SetActive(IsHidden);
+            MySpike.transform.localPosition = new Vector3(0f, .5f, 0f);
         }
     }
 
@@ -32,8 +33,7 @@ public class HiddenBlock : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            IsHidden = !IsHidden;
-            MyBlock.SetActive(IsHidden);
+            MySpike.transform.localPosition = new Vector3(0f, 0f, 0f);
         }
     }
 }
