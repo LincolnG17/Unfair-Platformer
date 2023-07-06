@@ -113,12 +113,12 @@ TextureImporter:
       name: sprie 1 (1)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 320
-        width: 320
-        height: 320
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 70
+        y: 400
+        width: 130
+        height: 120
+      alignment: 9
+      pivot: {x: 0.4917619, y: 0.4553772}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -134,12 +134,12 @@ TextureImporter:
       name: sprie 1 (1)_1
       rect:
         serializedVersion: 2
-        x: 320
-        y: 320
-        width: 320
-        height: 320
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 390
+        y: 401
+        width: 130
+        height: 140
+      alignment: 9
+      pivot: {x: 0.5082381, y: 0.39290488}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,12 +155,12 @@ TextureImporter:
       name: sprie 1 (1)_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 320
-        height: 320
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 70
+        y: 80
+        width: 130
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.27510032}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -186,6 +186,8 @@ TextureImporter:
       sprie 1 (1)_0: 324176276
       sprie 1 (1)_1: -1755519108
       sprie 1 (1)_2: 1814321662
+      sprie 1 (1)_3: -41878922
+      sprie 1 (1)_4: 1253732817
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

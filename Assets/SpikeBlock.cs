@@ -6,7 +6,8 @@ public class SpikeBlock : MonoBehaviour
 {
     public GameObject MyBlock;
     public GameObject MySpike;
-    
+    public Animator MyAnimator;
+
 
 
     // Start is called before the first frame update
@@ -25,7 +26,8 @@ public class SpikeBlock : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            MySpike.transform.localPosition = new Vector3(0f, .5f, 0f);
+            MyAnimator.SetBool("PlayerClose", true);
+            MySpike.SetActive(true);
         }
     }
 
@@ -33,7 +35,8 @@ public class SpikeBlock : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            MySpike.transform.localPosition = new Vector3(0f, 0f, 0f);
+            MyAnimator.SetBool("PlayerClose", false);
+            MySpike.SetActive(false);
         }
     }
 }
