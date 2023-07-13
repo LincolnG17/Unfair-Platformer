@@ -19,7 +19,7 @@ public class GroundCHecker : MonoBehaviour
     }
 
     
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         isOnGround = true;
         MyPlayer.isOnGround = true;
