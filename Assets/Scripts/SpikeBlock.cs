@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpikeBlock : MonoBehaviour
 {
     public GameObject MyBlock;
-    public GameObject MySpike;
+    public BoxCollider2D MySpike;
     public Animator MyAnimator;
 
 
@@ -27,7 +27,7 @@ public class SpikeBlock : MonoBehaviour
         if (collision.tag == "Player")
         {
             MyAnimator.SetBool("PlayerClose", true);
-            MySpike.SetActive(true);
+            MySpike.enabled = true;
         }
     }
 
@@ -36,7 +36,7 @@ public class SpikeBlock : MonoBehaviour
         if (collision.tag == "Player")
         {
             MyAnimator.SetBool("PlayerClose", false);
-            MySpike.SetActive(false);
+            MySpike.enabled = false;
         }
     }
 }
