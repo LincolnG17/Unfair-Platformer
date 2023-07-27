@@ -10,7 +10,14 @@ public class KillBox : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-            collision.gameObject.transform.SetPositionAndRotation(Vector3.zero, Quaternion.identity);
+            Vector3 PlayerSpawn = collision.GetComponent<Player>().MyStartPosition;
+
+
+
+
+
+
+            collision.gameObject.transform.SetPositionAndRotation(PlayerSpawn, Quaternion.identity);
         }
     }
 }

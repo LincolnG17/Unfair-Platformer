@@ -16,6 +16,13 @@ public class Player : MonoBehaviour
     private bool isAscending = false;
 
     private Rigidbody2D rb;
+    public Vector3 MyStartPosition;
+
+
+    private void Start()
+    {
+        MyStartPosition = transform.position;
+    }
 
     private void Awake()
     {
