@@ -17,7 +17,7 @@ public class Goal : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.D))
             {
-                if (Input.GetKey(KeyCode.Equals))
+                if (Input.GetKey(KeyCode.KeypadPlus))
                 {
                     MyCanvas.enabled = true;
                 }
