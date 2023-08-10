@@ -202,6 +202,7 @@ MonoBehaviour:
   ascendingGravity: 1
   descendingGravity: 1.2
   isOnGround: 0
+  MyStartPosition: {x: 0, y: 0, z: 0}
 --- !u!50 &4125860164848794571
 Rigidbody2D:
   serializedVersion: 4
