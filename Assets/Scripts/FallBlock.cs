@@ -5,15 +5,15 @@ using UnityEngine;
 public class FallBlock : MonoBehaviour
 {
     public GameObject MyBlock;
-    public BoxCollider2D MySpike;
-    public Animator MyAnimator;
-
+    public Rigidbody2D MyRigidBody2D;
+    public RigidbodyConstraints2D MyRigidBodyConstraints2D;
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        MyRigidBody2D = GetComponent<Rigidbody2D>();
+        MyRigidBody2D.constraints = RigidbodyConstraints2D.FreezeAll;
     }
 
     // Update is called once per frame
@@ -22,12 +22,11 @@ public class FallBlock : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.tag == "Player")
+        if(collision.gameObject.tag == "Player")
         {
-            MyAnimator.SetBool("PlayerClose", true);
-            MySpike.enabled = true;
+            MyRigidBody2D.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
         }
     }
 
@@ -35,8 +34,7 @@ public class FallBlock : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            MyAnimator.SetBool("PlayerClose", false);
-            MySpike.enabled = false;
+            
         }
     }
 }
