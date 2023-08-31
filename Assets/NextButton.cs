@@ -1,29 +1,41 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class ButtonHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class NextButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public Sprite hoverSprite;
-    private Sprite normalSprite;
-    private Image buttonImage;
+    public Sprite HoverSprite;
+    public Image ButtonImage; 
+    public Sprite StationarySprite;
 
-    private void Start()
+
+
+
+
+
+
+    // Start is called before the first frame update
+    void Start()
     {
-        // Get the default sprite from the UI Button's Image component
-        buttonImage = GetComponent<Image>();
-        normalSprite = buttonImage.sprite;
+        ButtonImage = GetComponent<Image>();
+        StationarySprite = ButtonImage.sprite; 
+        
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
+    public void OnPointerEnter (PointerEventData eventData)
     {
-        // Change the sprite to the hover sprite when the mouse enters
-        buttonImage.sprite = hoverSprite;
-    }
+        ButtonImage.sprite = HoverSprite;
 
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        // Change the sprite back to the normal sprite when the mouse exits
-        buttonImage.sprite = normalSprite;
+    }    
+   public void OnPointerExit (PointerEventData eventData) 
+    
+   {
+        ButtonImage.sprite = StationarySprite;
+    
+    
     }
+        
+    
 }
