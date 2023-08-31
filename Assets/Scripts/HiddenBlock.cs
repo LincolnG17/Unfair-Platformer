@@ -10,7 +10,7 @@ public class HiddenBlock : MonoBehaviour
 
     void Start()
     {
-        
+        MyBlock.SetActive(IsHidden);
     }
 
     // Update is called once per frame
