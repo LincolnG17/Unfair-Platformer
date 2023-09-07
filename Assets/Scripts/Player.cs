@@ -17,10 +17,11 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D rb;
     public Vector3 MyStartPosition;
-
+    public Animator myAnimator;
 
     private void Start()
     {
+        myAnimator = GetComponent<Animator>();
         MyStartPosition = transform.position;
     }
 
@@ -97,6 +98,7 @@ public class Player : MonoBehaviour
     {
         isJumping = true;
         rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+        myAnimator.SetTrigger("Jump");
     }
 
 }

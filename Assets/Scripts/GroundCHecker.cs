@@ -23,11 +23,13 @@ public class GroundCHecker : MonoBehaviour
     {
         isOnGround = true;
         MyPlayer.isOnGround = true;
+        MyPlayer.myAnimator.SetBool("Grounded", true);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         MyPlayer.isOnGround = false;
         isOnGround = false;
+        MyPlayer.myAnimator.SetBool("Grounded", false);
     }
 }
