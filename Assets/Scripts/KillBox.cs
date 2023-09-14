@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class KillBox : MonoBehaviour
 {
@@ -10,14 +11,9 @@ public class KillBox : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-            Vector3 PlayerSpawn = collision.GetComponent<Player>().MyStartPosition;
-
-
-
-
-
-
-            collision.gameObject.transform.SetPositionAndRotation(PlayerSpawn, Quaternion.identity);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            //Vector3 PlayerSpawn = collision.GetComponent<Player>().MyStartPosition;
+            //collision.gameObject.transform.SetPositionAndRotation(PlayerSpawn, Quaternion.identity);
         }
     }
 }

@@ -21,9 +21,12 @@ public class GroundCHecker : MonoBehaviour
     
     private void OnTriggerStay2D(Collider2D collision)
     {
-        isOnGround = true;
-        MyPlayer.isOnGround = true;
-        MyPlayer.myAnimator.SetBool("Grounded", true);
+        if (collision.tag != "Detection")
+        {
+            isOnGround = true;
+            MyPlayer.isOnGround = true;
+            MyPlayer.myAnimator.SetBool("Grounded", true);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
