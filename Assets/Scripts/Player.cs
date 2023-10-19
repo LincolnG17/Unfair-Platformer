@@ -19,6 +19,9 @@ public class Player : MonoBehaviour
     public Vector3 MyStartPosition;
     public Animator myAnimator;
 
+    public Sprite deadSprite;
+    public SpriteRenderer mySpriteRenderer;
+
     private void Start()
     {
         myAnimator = GetComponent<Animator>();
@@ -99,6 +102,11 @@ public class Player : MonoBehaviour
         isJumping = true;
         rb.velocity = new Vector2(rb.velocity.x, jumpPower);
         myAnimator.SetTrigger("Jump");
+    }
+
+    private void SetDeadSprite()
+    {
+        mySpriteRenderer.sprite = deadSprite;
     }
 
 }

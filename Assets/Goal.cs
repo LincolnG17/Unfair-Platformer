@@ -1,15 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Goal : MonoBehaviour
 {
     public Canvas MyCanvas;
+    public NextButton MyNextButton;
     // Start is called before the first frame update
     void Start()
     {
         MyCanvas = FindObjectOfType<Canvas>();
-        MyCanvas.enabled = false;
+        MyNextButton= FindObjectOfType<NextButton>();
+
+        MyNextButton.GetComponent<Image>().enabled = false;
+        
+        //MyCanvas.enabled = false;
     }
 
     private void Update()
@@ -20,7 +26,7 @@ public class Goal : MonoBehaviour
             {
                 if (Input.GetKey(KeyCode.KeypadPlus))
                 {
-                    MyCanvas.enabled = true;
+                    MyNextButton.GetComponent<Image>().enabled = true;
                 }
 
             }
@@ -31,7 +37,7 @@ public class Goal : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-            MyCanvas.enabled = true;
+            MyNextButton.GetComponent<Image>().enabled = true;
         }
     }
 }
