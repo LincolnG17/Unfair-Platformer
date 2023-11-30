@@ -5,8 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class KillBox : MonoBehaviour
 {
-    public BoxCollider2D MyCollider;
-    
+    public Collider2D MyCollider;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

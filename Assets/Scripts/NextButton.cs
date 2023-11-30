@@ -16,6 +16,7 @@ public class NextButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     {
         ButtonImage = GetComponent<Image>();
         StationarySprite = ButtonImage.sprite;
+        ButtonImage.enabled = false;
     }
 
     public void OnPointerEnter (PointerEventData eventData)

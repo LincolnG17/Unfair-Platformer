@@ -1,3 +1,4 @@
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -13,6 +14,7 @@ public class Player : MonoBehaviour
 
     private bool isJumping = false;
     public bool isOnGround = false;
+    public bool isFacingRight = true;
     private bool isAscending = false;
 
     private Rigidbody2D rb;
@@ -59,6 +61,19 @@ public class Player : MonoBehaviour
 
             // Clamp velocity to maximum speed
             xVelocity = Mathf.Clamp(xVelocity, -maxSpeed, maxSpeed);
+            if(horizontalInput > 0)
+            {
+                mySpriteRenderer.flipX = false;
+                isFacingRight = true;
+            }
+                
+            else
+            {
+                mySpriteRenderer.flipX = true;
+                isFacingRight = false;
+            }
+
+
         }
         else
         {
